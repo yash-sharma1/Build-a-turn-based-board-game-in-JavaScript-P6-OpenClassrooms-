@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Turn-based board battle game in Javascript and jQuery">
+    <meta name="author" content="Yash Sharma">
+    <!-- <link rel="icon" href="../../favicon.ico">    -->
+    <title>Turn-based Avengers battle game</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <div>
+            <img src="image/logo.png" class="logo" alt="">
+            <h1 id="here">Let's Save The Universe - Avengers Assemble</h1>
+        </div>
+    </header>
+    <div class="container">
+        <div class="player-container active" id="player-1">
+            <div class="player">
+                <h2 class="name-1"></h2>
+                <div class="player-img"> <img src="image/player-1.png" alt="Hulk">
+                </div>
+            </div>
+            <div class="weapon">
+                <h2>Health: <span id="health-1"></span></h2>
+                <div class="stone-1"></div>
+                <h3>Energy: <span class="energy-1"></span></h3>
+                <div class="turn-1"></div>
+                <div class="buttons">
+                    <button class="btn-attack-1">Attack</button>
+                    <button class="btn-defend-1">Defend</button>
+                </div>
+            </div>
+        </div>
+        <section id="intro">
+            <div class="intro-content">
+                <h2>Evil Thanos is on his mission to destroy the Universe - Let's Save the Universe</h2>
+                <p>How to Play:</p>
+                <ol>
+                    <li>Hulk and Thanos can move upto 3 spaces in both up and down directions.</li>
+                    <li>You have to collect different stones for being more powerful and increase your Health.</li>
+                    <li>Intially you will have Time Stone which is powerful but have to collect more to be more powerful.</li>
+                    <li>Stones have different powers, try to choose the most powerful one:</li>
+                </ol>
+                <div class="weapons">
+                    <figure>
+                        <img src="image/wp-2.png" alt="stone">
+                        <caption>30</caption>
+                    </figure>
+
+                    <figure>
+                        <img src="image/wp-3.png" alt="stone">
+                        <caption>40</caption>
+                    </figure>
+
+                    <figure>
+                        <img src="image/wp-4.png" alt="stone">
+                        <caption>50</caption>
+                    </figure>
+
+                    <figure>
+                        <img src="image/wp-5.png" alt="stone">
+                        <caption>60</caption>
+                    </figure>
+
+                </div>
+                <ol>
+
+                    <li>If you feel you're strong enough then, you can find an another player on the game board to start your fight.</li>
+                    <li>You can increase you health by going to quiz blocks<img id="sign" src="image/quiz-1.png" alt=""> and answer right to the question.</li>
+                    <li>But remember! If your answer will be wrong, you will descrease your health score by -10 and on right answer you will get +20</li>
+                    <li>You have 2 possibilites: attack or defend, choose the better strategy.</li>
+
+                </ol>
+                <p style="text-align:center">All The Best!</p>
+                <button id="start" onclick="startGame(this)">Start game</button>
+            </div>
+        </section>
+        <div id="board-game">
+        </div>
+        <div class="player-container" id="player-2">
+            <div class="player">
+                <h2 class="name-2"></h2>
+                <div class="player-img"> <img src="image/player-2.png" alt="Thanos"></div>
+            </div>
+            <div class="weapon">
+                <h2>Health: <span id="health-2"></span></h2>
+                <div class="stone-2"></div>
+                <h3>Energy: <span class="energy-2"></span></h3>
+                <div class="turn-2"></div>
+                <div class="buttons">
+                    <button class="btn-attack-2">Attack</button>
+                    <button class="btn-defend-2">Defend</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-quiz">
+        <button class="close-modal" onclick="closeQuiz(this)">x</button>
+        <p class="question"></p>
+        <form></form>
+        <p class="result"></p>
+    </div>
+    <div id="gameOver">
+        <div class="gameOver-content">
+            <h2>GAME OVER!</h2>
+            <p>The winner is <span id="winner"></span>!</p>
+            <p>Don't worry <span id='looser'></span>!! Better Luck Next Time!!</p>
+            <h2>Thank you for Playing</h2>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
