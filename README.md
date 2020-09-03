@@ -4,7 +4,7 @@ In this project, you will create an online game written JavaScript in which 2 pl
 Browser game turn-based overview
 Game overview
 
-##Step 1: Generate the map
+Step 1: Generate the map
 Start by randomly generating the game map. Each box can be either:
 - Empty
 - Unavailable (dimmed)
@@ -15,12 +15,12 @@ You should invent at least 4 types of weapons in the game, each with different d
 
 The placement of the two players is also randomly on the map when the game loads. They should not touch (they can not be together).
 
-##Step 2: Movements
+Step 2: Movements
 For each turn, a player can move from one to three boxes (horizontally or vertically) before ending their turn. They obviously can not pass through obstacles directly.
 
 If a player passes over a box containing a weapon, they leave their current weapon on site and replace it with the new one.
 
-##Step 3: Fight!
+Step 3: Fight!
 If players cross over adjacent squares (horizontally or vertically), a battle begins.
 
 During combat, the game works is as follows:
